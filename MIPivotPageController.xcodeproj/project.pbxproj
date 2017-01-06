@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC547F221E1FA833001B49CB /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC547F211E1FA833001B49CB /* CustomHeaderView.swift */; };
+		AC547F241E1FA83A001B49CB /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC547F231E1FA83A001B49CB /* CustomHeaderView.xib */; };
+		AC5587671D8D91A60051F210 /* TabBarControllerFirstChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5587661D8D91A60051F210 /* TabBarControllerFirstChild.swift */; };
+		AC5587691D8D91AD0051F210 /* TabBarControllerSecondChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5587681D8D91AD0051F210 /* TabBarControllerSecondChild.swift */; };
+		AC55876B1D8DA19C0051F210 /* TabBarControllerFirstChildDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55876A1D8DA19C0051F210 /* TabBarControllerFirstChildDetail.swift */; };
+		AC8AE9CB1D8ADA1D00F7C8B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AE9CA1D8ADA1D00F7C8B4 /* AppDelegate.swift */; };
+		AC8AE9D01D8ADA1D00F7C8B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8AE9CE1D8ADA1D00F7C8B4 /* Main.storyboard */; };
+		AC8AE9D21D8ADA1D00F7C8B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC8AE9D11D8ADA1D00F7C8B4 /* Assets.xcassets */; };
+		AC8AE9D51D8ADA1D00F7C8B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8AE9D31D8ADA1D00F7C8B4 /* LaunchScreen.storyboard */; };
+		AC90AF881D8B2AE800625FB4 /* MIPivotPageControllerPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90AF861D8B2AE800625FB4 /* MIPivotPageControllerPageCell.swift */; };
+		AC90AF891D8B2AE800625FB4 /* MIPivotPageControllerPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC90AF871D8B2AE800625FB4 /* MIPivotPageControllerPageCell.xib */; };
+		AC90AF8C1D8B31DC00625FB4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90AF8B1D8B31DC00625FB4 /* NavigationController.swift */; };
+		AC90AF8E1D8B31E300625FB4 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90AF8D1D8B31E300625FB4 /* SingleViewController.swift */; };
+		ACE1E4321D8C2EBF005C57DD /* NavigationControllerRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1E4311D8C2EBF005C57DD /* NavigationControllerRoot.swift */; };
+		ACE1E4341D8C2ED3005C57DD /* NavigationControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1E4331D8C2ED3005C57DD /* NavigationControllerDetail.swift */; };
+		ACF364B71D8AEEEA00C31B9F /* MIPivotPageControllerMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF364B01D8AEEEA00C31B9F /* MIPivotPageControllerMenuCell.swift */; };
+		ACF364B81D8AEEEA00C31B9F /* MIPivotPageControllerMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF364B11D8AEEEA00C31B9F /* MIPivotPageControllerMenuCell.xib */; };
+		ACF364B91D8AEEEA00C31B9F /* MIPivotPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF364B21D8AEEEA00C31B9F /* MIPivotPageController.swift */; };
+		ACF364BA1D8AEEEA00C31B9F /* MIPivotPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF364B31D8AEEEA00C31B9F /* MIPivotPageController.xib */; };
+		ACF908101D8BFCFB0042D140 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF9080F1D8BFCFB0042D140 /* TabBarController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AC547F211E1FA833001B49CB /* CustomHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
+		AC547F231E1FA83A001B49CB /* CustomHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
+		AC5587661D8D91A60051F210 /* TabBarControllerFirstChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarControllerFirstChild.swift; sourceTree = "<group>"; };
+		AC5587681D8D91AD0051F210 /* TabBarControllerSecondChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarControllerSecondChild.swift; sourceTree = "<group>"; };
+		AC55876A1D8DA19C0051F210 /* TabBarControllerFirstChildDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarControllerFirstChildDetail.swift; sourceTree = "<group>"; };
+		AC8AE9C71D8ADA1D00F7C8B4 /* MIPivotPageController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIPivotPageController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC8AE9CA1D8ADA1D00F7C8B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC8AE9CF1D8ADA1D00F7C8B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC8AE9D11D8ADA1D00F7C8B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC8AE9D41D8ADA1D00F7C8B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC8AE9D61D8ADA1D00F7C8B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC90AF861D8B2AE800625FB4 /* MIPivotPageControllerPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIPivotPageControllerPageCell.swift; sourceTree = "<group>"; };
+		AC90AF871D8B2AE800625FB4 /* MIPivotPageControllerPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIPivotPageControllerPageCell.xib; sourceTree = "<group>"; };
+		AC90AF8B1D8B31DC00625FB4 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		AC90AF8D1D8B31E300625FB4 /* SingleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleViewController.swift; sourceTree = "<group>"; };
+		ACE1E4311D8C2EBF005C57DD /* NavigationControllerRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerRoot.swift; sourceTree = "<group>"; };
+		ACE1E4331D8C2ED3005C57DD /* NavigationControllerDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDetail.swift; sourceTree = "<group>"; };
+		ACF364B01D8AEEEA00C31B9F /* MIPivotPageControllerMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIPivotPageControllerMenuCell.swift; sourceTree = "<group>"; };
+		ACF364B11D8AEEEA00C31B9F /* MIPivotPageControllerMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIPivotPageControllerMenuCell.xib; sourceTree = "<group>"; };
+		ACF364B21D8AEEEA00C31B9F /* MIPivotPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIPivotPageController.swift; sourceTree = "<group>"; };
+		ACF364B31D8AEEEA00C31B9F /* MIPivotPageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIPivotPageController.xib; sourceTree = "<group>"; };
+		ACF9080F1D8BFCFB0042D140 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC8AE9C41D8ADA1D00F7C8B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC547F201E1FA81F001B49CB /* CustomHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				AC547F211E1FA833001B49CB /* CustomHeaderView.swift */,
+				AC547F231E1FA83A001B49CB /* CustomHeaderView.xib */,
+			);
+			path = CustomHeaderView;
+			sourceTree = "<group>";
+		};
+		AC8AE9BE1D8ADA1D00F7C8B4 = {
+			isa = PBXGroup;
+			children = (
+				AC8AE9C91D8ADA1D00F7C8B4 /* MIPivotPageControllerDemo */,
+				AC8AE9C81D8ADA1D00F7C8B4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC8AE9C81D8ADA1D00F7C8B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC8AE9C71D8ADA1D00F7C8B4 /* MIPivotPageController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC8AE9C91D8ADA1D00F7C8B4 /* MIPivotPageControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				AC8AE9D61D8ADA1D00F7C8B4 /* Info.plist */,
+				AC8AE9CA1D8ADA1D00F7C8B4 /* AppDelegate.swift */,
+				AC8AE9D11D8ADA1D00F7C8B4 /* Assets.xcassets */,
+				AC547F201E1FA81F001B49CB /* CustomHeaderView */,
+				AC8AE9D31D8ADA1D00F7C8B4 /* LaunchScreen.storyboard */,
+				AC8AE9CE1D8ADA1D00F7C8B4 /* Main.storyboard */,
+				ACF364AE1D8AEEEA00C31B9F /* MIPivotPageController */,
+				AC90AF8A1D8B31CA00625FB4 /* ViewControllers */,
+			);
+			path = MIPivotPageControllerDemo;
+			sourceTree = "<group>";
+		};
+		AC90AF851D8B2AC200625FB4 /* PageCell */ = {
+			isa = PBXGroup;
+			children = (
+				AC90AF861D8B2AE800625FB4 /* MIPivotPageControllerPageCell.swift */,
+				AC90AF871D8B2AE800625FB4 /* MIPivotPageControllerPageCell.xib */,
+			);
+			path = PageCell;
+			sourceTree = "<group>";
+		};
+		AC90AF8A1D8B31CA00625FB4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC90AF8B1D8B31DC00625FB4 /* NavigationController.swift */,
+				ACE1E4311D8C2EBF005C57DD /* NavigationControllerRoot.swift */,
+				ACE1E4331D8C2ED3005C57DD /* NavigationControllerDetail.swift */,
+				AC90AF8D1D8B31E300625FB4 /* SingleViewController.swift */,
+				ACF9080F1D8BFCFB0042D140 /* TabBarController.swift */,
+				AC5587661D8D91A60051F210 /* TabBarControllerFirstChild.swift */,
+				AC55876A1D8DA19C0051F210 /* TabBarControllerFirstChildDetail.swift */,
+				AC5587681D8D91AD0051F210 /* TabBarControllerSecondChild.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		ACF364AE1D8AEEEA00C31B9F /* MIPivotPageController */ = {
+			isa = PBXGroup;
+			children = (
+				ACF364B21D8AEEEA00C31B9F /* MIPivotPageController.swift */,
+				ACF364B31D8AEEEA00C31B9F /* MIPivotPageController.xib */,
+				ACF364AF1D8AEEEA00C31B9F /* MenuCell */,
+				AC90AF851D8B2AC200625FB4 /* PageCell */,
+			);
+			name = MIPivotPageController;
+			path = ../MIPivotPageController;
+			sourceTree = "<group>";
+		};
+		ACF364AF1D8AEEEA00C31B9F /* MenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				ACF364B01D8AEEEA00C31B9F /* MIPivotPageControllerMenuCell.swift */,
+				ACF364B11D8AEEEA00C31B9F /* MIPivotPageControllerMenuCell.xib */,
+			);
+			path = MenuCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC8AE9C61D8ADA1D00F7C8B4 /* MIPivotPageController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC8AE9D91D8ADA1D00F7C8B4 /* Build configuration list for PBXNativeTarget "MIPivotPageController" */;
+			buildPhases = (
+				AC8AE9C31D8ADA1D00F7C8B4 /* Sources */,
+				AC8AE9C41D8ADA1D00F7C8B4 /* Frameworks */,
+				AC8AE9C51D8ADA1D00F7C8B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MIPivotPageController;
+			productName = MIPivotPageController;
+			productReference = AC8AE9C71D8ADA1D00F7C8B4 /* MIPivotPageController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC8AE9BF1D8ADA1D00F7C8B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Mario Iannotta";
+				TargetAttributes = {
+					AC8AE9C61D8ADA1D00F7C8B4 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = X9253HG4XT;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AC8AE9C21D8ADA1D00F7C8B4 /* Build configuration list for PBXProject "MIPivotPageController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC8AE9BE1D8ADA1D00F7C8B4;
+			productRefGroup = AC8AE9C81D8ADA1D00F7C8B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC8AE9C61D8ADA1D00F7C8B4 /* MIPivotPageController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC8AE9C51D8ADA1D00F7C8B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACF364BA1D8AEEEA00C31B9F /* MIPivotPageController.xib in Resources */,
+				ACF364B81D8AEEEA00C31B9F /* MIPivotPageControllerMenuCell.xib in Resources */,
+				AC90AF891D8B2AE800625FB4 /* MIPivotPageControllerPageCell.xib in Resources */,
+				AC8AE9D51D8ADA1D00F7C8B4 /* LaunchScreen.storyboard in Resources */,
+				AC8AE9D21D8ADA1D00F7C8B4 /* Assets.xcassets in Resources */,
+				AC8AE9D01D8ADA1D00F7C8B4 /* Main.storyboard in Resources */,
+				AC547F241E1FA83A001B49CB /* CustomHeaderView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC8AE9C31D8ADA1D00F7C8B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC90AF8E1D8B31E300625FB4 /* SingleViewController.swift in Sources */,
+				AC5587691D8D91AD0051F210 /* TabBarControllerSecondChild.swift in Sources */,
+				AC90AF8C1D8B31DC00625FB4 /* NavigationController.swift in Sources */,
+				ACF364B71D8AEEEA00C31B9F /* MIPivotPageControllerMenuCell.swift in Sources */,
+				AC90AF881D8B2AE800625FB4 /* MIPivotPageControllerPageCell.swift in Sources */,
+				AC5587671D8D91A60051F210 /* TabBarControllerFirstChild.swift in Sources */,
+				AC55876B1D8DA19C0051F210 /* TabBarControllerFirstChildDetail.swift in Sources */,
+				AC8AE9CB1D8ADA1D00F7C8B4 /* AppDelegate.swift in Sources */,
+				AC547F221E1FA833001B49CB /* CustomHeaderView.swift in Sources */,
+				ACF908101D8BFCFB0042D140 /* TabBarController.swift in Sources */,
+				ACE1E4321D8C2EBF005C57DD /* NavigationControllerRoot.swift in Sources */,
+				ACF364B91D8AEEEA00C31B9F /* MIPivotPageController.swift in Sources */,
+				ACE1E4341D8C2ED3005C57DD /* NavigationControllerDetail.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AC8AE9CE1D8ADA1D00F7C8B4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC8AE9CF1D8ADA1D00F7C8B4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC8AE9D31D8ADA1D00F7C8B4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC8AE9D41D8ADA1D00F7C8B4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC8AE9D71D8ADA1D00F7C8B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC8AE9D81D8ADA1D00F7C8B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC8AE9DA1D8ADA1D00F7C8B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X9253HG4XT;
+				INFOPLIST_FILE = MIPivotPageControllerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marioiannotta.MIPivotPageController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AC8AE9DB1D8ADA1D00F7C8B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X9253HG4XT;
+				INFOPLIST_FILE = MIPivotPageControllerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marioiannotta.MIPivotPageController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC8AE9C21D8ADA1D00F7C8B4 /* Build configuration list for PBXProject "MIPivotPageController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC8AE9D71D8ADA1D00F7C8B4 /* Debug */,
+				AC8AE9D81D8ADA1D00F7C8B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC8AE9D91D8ADA1D00F7C8B4 /* Build configuration list for PBXNativeTarget "MIPivotPageController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC8AE9DA1D8ADA1D00F7C8B4 /* Debug */,
+				AC8AE9DB1D8ADA1D00F7C8B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC8AE9BF1D8ADA1D00F7C8B4 /* Project object */;
+}

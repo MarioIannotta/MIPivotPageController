@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root-->
+        <scene sceneID="W8E-nC-OJa">
+            <objects>
+                <viewController title="Root" id="tyJ-aI-15a" customClass="NavigationControllerRoot" customModule="MIPivotPageController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BvX-8q-twe"/>
+                        <viewControllerLayoutGuide type="bottom" id="aXU-IL-Jcm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tZt-XI-wna">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbL-LV-nhz">
+                                <state key="normal" title="Push example"/>
+                                <connections>
+                                    <segue destination="sT6-v1-ntc" kind="show" id="k6J-NX-rNc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navigation demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffb-kU-ZRg">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ffb-kU-ZRg" firstAttribute="centerX" secondItem="tZt-XI-wna" secondAttribute="centerX" id="7ks-rU-0mE"/>
+                            <constraint firstItem="nbL-LV-nhz" firstAttribute="centerX" secondItem="tZt-XI-wna" secondAttribute="centerX" id="bvX-BB-3N8"/>
+                            <constraint firstItem="nbL-LV-nhz" firstAttribute="centerY" secondItem="tZt-XI-wna" secondAttribute="centerY" id="fgB-Jo-0xi"/>
+                            <constraint firstItem="ffb-kU-ZRg" firstAttribute="top" secondItem="BvX-8q-twe" secondAttribute="bottom" constant="50" id="uDh-fW-71y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NBr-lv-XcJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rB3-lA-OAM" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084" y="125"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="eUR-pJ-ogv">
+            <objects>
+                <viewController title="Detail" id="sT6-v1-ntc" customClass="NavigationControllerDetail" customModule="MIPivotPageController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AIR-pa-2Wn"/>
+                        <viewControllerLayoutGuide type="bottom" id="gqF-50-nuV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LpJ-nK-CHe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail view controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIk-mH-Awu">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UIk-mH-Awu" firstAttribute="centerY" secondItem="LpJ-nK-CHe" secondAttribute="centerY" id="EE5-H8-Ek5"/>
+                            <constraint firstItem="UIk-mH-Awu" firstAttribute="centerX" secondItem="LpJ-nK-CHe" secondAttribute="centerX" id="jgH-PW-JMv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qMH-cs-EzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3023" y="126"/>
+        </scene>
+        <!--Single View Controller-->
+        <scene sceneID="Kgq-m9-sKw">
+            <objects>
+                <viewController storyboardIdentifier="SingleViewController" id="2i7-Va-cFZ" customClass="SingleViewController" customModule="MIPivotPageController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5HM-kp-jgK"/>
+                        <viewControllerLayoutGuide type="bottom" id="4bg-Wt-4dv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ICb-1m-ZoQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWq-4r-Fh8">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EWq-4r-Fh8" firstAttribute="centerX" secondItem="ICb-1m-ZoQ" secondAttribute="centerX" id="IYe-ed-I4E"/>
+                            <constraint firstItem="EWq-4r-Fh8" firstAttribute="centerY" secondItem="ICb-1m-ZoQ" secondAttribute="centerY" id="aTv-FL-o1T"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mRV-Tc-pEp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="-838"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="2Xu-gh-XET">
+            <objects>
+                <viewController id="0X5-vT-4IN" customClass="TabBarControllerSecondChild" customModule="MIPivotPageController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uaN-eY-EdO"/>
+                        <viewControllerLayoutGuide type="bottom" id="pUF-Be-I3D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BhZ-X9-czM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab VC 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vi-bG-DfK">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9vi-bG-DfK" firstAttribute="centerX" secondItem="BhZ-X9-czM" secondAttribute="centerX" id="wYA-ii-uVg"/>
+                            <constraint firstItem="9vi-bG-DfK" firstAttribute="centerY" secondItem="BhZ-X9-czM" secondAttribute="centerY" id="ydm-Ge-2f9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="B5y-0S-pDR">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jt-Ba-he5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084" y="1501"/>
+        </scene>
+        <!--Root-->
+        <scene sceneID="tqx-Zy-RPs">
+            <objects>
+                <viewController title="Root" id="4QZ-rl-dVm" customClass="TabBarControllerFirstChild" customModule="MIPivotPageController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gHn-1t-SVZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="DWt-dV-BGQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="idR-Xg-Aku">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab VC 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSM-KE-Uhd">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WT-DD-JqX">
+                                <state key="normal" title="Push example"/>
+                                <connections>
+                                    <segue destination="2ER-OS-NSm" kind="show" id="IEI-Y6-FsN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iSM-KE-Uhd" firstAttribute="centerX" secondItem="idR-Xg-Aku" secondAttribute="centerX" id="8lq-1O-dDn"/>
+                            <constraint firstItem="iSM-KE-Uhd" firstAttribute="centerY" secondItem="idR-Xg-Aku" secondAttribute="centerY" constant="-20" id="Ebp-IN-aZf"/>
+                            <constraint firstItem="8WT-DD-JqX" firstAttribute="centerX" secondItem="idR-Xg-Aku" secondAttribute="centerX" id="fob-zt-EjD"/>
+                            <constraint firstItem="8WT-DD-JqX" firstAttribute="top" secondItem="iSM-KE-Uhd" secondAttribute="bottom" constant="15" id="lFo-CX-dPp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="U6m-RS-jIM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5dC-Vv-bqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3023" y="845"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="tkK-s0-zzp">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="JwT-OF-4Ea" customClass="TabBarController" customModule="MIPivotPageController" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="kQa-Qn-p6m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="DSc-O5-JPk" kind="relationship" relationship="viewControllers" id="BTh-8M-Lhf"/>
+                        <segue destination="0X5-vT-4IN" kind="relationship" relationship="viewControllers" id="wid-l3-MvU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G80-dA-2jc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="1173"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="d1K-Rp-oUV">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="sF1-d4-Uag" customClass="NavigationController" customModule="MIPivotPageController" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VC9-5X-Cwp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tyJ-aI-15a" kind="relationship" relationship="rootViewController" id="9S6-3W-Q2K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UYl-35-lli" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="127"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="bpv-hE-uqY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DSc-O5-JPk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="wYb-Nw-QvH">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-15"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qKP-bT-FWd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4QZ-rl-dVm" kind="relationship" relationship="rootViewController" id="qC8-u1-O72"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gI7-4r-J43" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084" y="845"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="qXD-Ex-rYy">
+            <objects>
+                <viewController title="Detail" id="2ER-OS-NSm" customClass="TabBarControllerFirstChildDetail" customModule="MIPivotPageController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z8c-pd-8mg"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZTq-Ym-ryy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rfq-W9-r0q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab VC 1.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOi-8X-Fh7">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SOi-8X-Fh7" firstAttribute="centerY" secondItem="Rfq-W9-r0q" secondAttribute="centerY" id="EvZ-IL-1gL"/>
+                            <constraint firstItem="SOi-8X-Fh7" firstAttribute="centerX" secondItem="Rfq-W9-r0q" secondAttribute="centerX" id="PbY-SF-GdU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TGH-pX-XCz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="31y-UF-DNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3921" y="844"/>
+        </scene>
+    </scenes>
+</document>

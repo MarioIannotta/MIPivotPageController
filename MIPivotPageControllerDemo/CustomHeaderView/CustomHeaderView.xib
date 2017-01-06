@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomHeaderView" customModule="MIPivotPageController" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="391" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6k-DE-4hc">
+                    <rect key="frame" x="20" y="30" width="351" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTK-Zk-O6X">
+                    <rect key="frame" x="20" y="64" width="351" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.35227880119724098" green="0.78382050474444642" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="N6k-DE-4hc" secondAttribute="trailing" constant="20" id="SdB-A6-UTG"/>
+                <constraint firstItem="PTK-Zk-O6X" firstAttribute="leading" secondItem="N6k-DE-4hc" secondAttribute="leading" id="bIY-XA-Ezn"/>
+                <constraint firstItem="N6k-DE-4hc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="eBT-IU-BFr"/>
+                <constraint firstItem="N6k-DE-4hc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="h8K-RE-4EI"/>
+                <constraint firstItem="PTK-Zk-O6X" firstAttribute="trailing" secondItem="N6k-DE-4hc" secondAttribute="trailing" id="i29-DX-lAJ"/>
+                <constraint firstItem="PTK-Zk-O6X" firstAttribute="top" secondItem="N6k-DE-4hc" secondAttribute="bottom" constant="5" id="vds-hZ-3il"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="subtitleLabel" destination="PTK-Zk-O6X" id="JHB-a0-2WJ"/>
+                <outlet property="titleLabel" destination="N6k-DE-4hc" id="bAi-jC-On1"/>
+            </connections>
+            <point key="canvasLocation" x="42.5" y="79.5"/>
+        </view>
+    </objects>
+</document>
