@@ -10,7 +10,10 @@ import UIKit
 
 @objc protocol MIPivotRootPage: class {
     
-    func imageForPivotPage() -> UIImage?
+    var imageForPivotPage: UIImage? { get }
+    
+    @objc optional var badgeValueForPivotPage: String? { get }
+    @objc optional var shouldHideBadgeOnPageFocus: Bool { get }
     
     @objc optional func rootPivotPageDidShow()
     @objc optional func rootPivotPageWillHide()
@@ -35,22 +38,42 @@ class MIPivotPage: UIViewController, MIPivotRootPage {
         
         UIView.animate(withDuration: 0.2) {
             self.pivotPageController.view.layoutIfNeeded()
-            
         }
         
     }
     
-    func shouldShowPivotMenu() -> Bool { return true }
-    func pivotPageShouldHandleNavigation() -> Bool { return true }
+    func shouldShowPivotMenu() -> Bool {
+        
+        return true
+        
+    }
+    func pivotPageShouldHandleNavigation() -> Bool {
+        
+        return true
+        
+    }
     
     // MARK: - MIPivotRootPage
-    func imageForPivotPage() -> UIImage? { return nil }
+    
+    var imageForPivotPage: UIImage? {
+        
+        return nil
+        
+    }
     
 }
 
 protocol MIPivotPageControllerDelegate: class {
     
     func miPivotPageControllerWillShow(miPivotPageController: MIPivotPageController)
+    
+}
+
+struct MIPivotPageControllerBadgeConfig {
+    
+    var badgeBackgroundColor: UIColor = .white
+    var badgeLabelFont: UIFont = .systemFont(ofSize: 12)
+    var badgeLabelColor: UIColor = .black
     
 }
 
@@ -74,6 +97,7 @@ class MIPivotPageController: UIViewController {
     
     private var setupClosure: SetupClosure?
     
+    fileprivate var badgeConfig: MIPivotPageControllerBadgeConfig? = nil
     fileprivate var menuHeight: CGFloat = 80
     
     private var statusBarStyle = UIStatusBarStyle.default
@@ -83,7 +107,9 @@ class MIPivotPageController: UIViewController {
     var selectedIndex: Int = 0
     var rootPages: [MIPivotRootPage]!
     var pagesNumber: Int {
+        
         return rootPages?.count ?? 0
+        
     }
     
     // MARK: - Init
@@ -108,7 +134,6 @@ class MIPivotPageController: UIViewController {
         setupHeaderView()
         
         setupClosure?(self)
-        setNeedsStatusBarAppearanceUpdate()
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -117,6 +142,7 @@ class MIPivotPageController: UIViewController {
         delegate?.miPivotPageControllerWillShow(miPivotPageController: self)
         
     }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         
         return statusBarStyle
@@ -204,9 +230,10 @@ class MIPivotPageController: UIViewController {
     func setStatusBarStyle(_ statusBarStyle: UIStatusBarStyle) {
         
         self.statusBarStyle = statusBarStyle
+        setNeedsStatusBarAppearanceUpdate()
         
     }
-    func addHeader(headerView: UIView, withHeight height: CGFloat) {
+    func addHeaderView(_ headerView: UIView, withHeight height: CGFloat) {
         
         headerContainerView.addSubview(headerView)
         
@@ -255,23 +282,42 @@ class MIPivotPageController: UIViewController {
         menuCollectionViewTopConstraint.constant = 0
         
     }
+    func setBadgeConfig(_ badgeConfig: MIPivotPageControllerBadgeConfig) {
+        
+        self.badgeConfig = badgeConfig
+        
+    }
+    func refreshBadge(forRootPageAtIndex miPivotRootPageIndex: Int) {
+        
+        menuCollectionView.reloadItems(at: [IndexPath(item: miPivotRootPageIndex, section: 0)])
+        
+    }
     
     // MARK: - Shortcuts
     
-    func pivotPage(atIndex index: Int) -> MIPivotRootPage {
+    fileprivate func pivotPage(atIndex index: Int) -> MIPivotRootPage {
         
-        let index = max(0, min(pagesNumber, index))
-        return rootPages[index]
+        return rootPages[max(0, min(pagesNumber, index))]
         
     }
-    func menuImage(atIndex index: Int) -> UIImage? {
+    fileprivate func menuImage(atIndex index: Int) -> UIImage? {
 
-        return pivotPage(atIndex: index).imageForPivotPage()
+        return pivotPage(atIndex: index).imageForPivotPage
         
     }
-    func viewController(atIndex index: Int) -> UIViewController? {
+    fileprivate func badgeValue(atIndex index: Int) -> String? {
+        
+        return pivotPage(atIndex: index).badgeValueForPivotPage ?? nil // strange swift error fix
+        
+    }
+    fileprivate func viewController(atIndex index: Int) -> UIViewController? {
         
         return pivotPage(atIndex: index) as? UIViewController
+        
+    }
+    fileprivate func shouldHideBadgeOnPageFocus(atIndex index: Int) -> Bool {
+        
+        return pivotPage(atIndex: index).shouldHideBadgeOnPageFocus ?? false
         
     }
     
@@ -283,9 +329,10 @@ class MIPivotPageController: UIViewController {
             
             guard let cell = menuCollectionView.cellForItem(at: IndexPath(item: i, section: 0)) as? MIPivotPageControllerMenuCell else { return }
             
+            let shouldHideBadge = shouldHideBadgeOnPageFocus(atIndex: i)
             let cellAnimationProgress = 1 - abs(animationProgress - Float(i))
             
-            cell.updateForAnimationProgress(cellAnimationProgress)
+            cell.updateUI(forProgress: cellAnimationProgress, shouldHideBadgeOnPageFocus: shouldHideBadge)
             
         }
         
@@ -322,7 +369,13 @@ extension MIPivotPageController: UICollectionViewDataSource, UICollectionViewDel
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MIPivotPageControllerMenuCell.cellIdentifier, for: indexPath) as? MIPivotPageControllerMenuCell
                 else { return UICollectionViewCell() }
             
-            cell.configure(image: menuImage(atIndex: indexPath.item), selected: selectedIndex == indexPath.item)
+            cell.configure(
+                image: menuImage(atIndex: indexPath.item),
+                badgeValue: badgeValue(atIndex: indexPath.item),
+                badgeConfig: badgeConfig,
+                shouldHideBadgeOnPageFocus: shouldHideBadgeOnPageFocus(atIndex: indexPath.item),
+                selected: selectedIndex == indexPath.item
+            )
             
             return cell
             

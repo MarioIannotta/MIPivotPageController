@@ -19,7 +19,7 @@ class SingleViewController: UIViewController {
 
 extension SingleViewController: MIPivotRootPage {
     
-    func imageForPivotPage() -> UIImage? {
+    var imageForPivotPage: UIImage? {
         return UIImage(named: "iconB")
     }
     

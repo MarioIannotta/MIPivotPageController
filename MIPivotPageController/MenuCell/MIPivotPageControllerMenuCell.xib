@@ -1,32 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MIPivotPageControllerMenuCell" id="8yX-Oe-Nfg" customClass="MIPivotPageControllerMenuCell" customModule="ColorSnipe" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="7E5-aq-G81">
-                        <frame key="frameInset" minX="8" minY="8" width="184" height="184"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7E5-aq-G81">
+                        <rect key="frame" x="8" y="8" width="124" height="124"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tld-mR-x0H">
+                        <rect key="frame" x="91" y="10" width="49" height="23"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozA-tc-8g4">
+                                <rect key="frame" x="9" y="4" width="31" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ozA-tc-8g4" secondAttribute="bottom" constant="4" id="5k2-3W-4pq"/>
+                            <constraint firstItem="ozA-tc-8g4" firstAttribute="leading" secondItem="Tld-mR-x0H" secondAttribute="leading" constant="9" id="Cnt-h8-epp"/>
+                            <constraint firstAttribute="trailing" secondItem="ozA-tc-8g4" secondAttribute="trailing" constant="9" id="TEG-Hb-JJC"/>
+                            <constraint firstItem="ozA-tc-8g4" firstAttribute="top" secondItem="Tld-mR-x0H" secondAttribute="top" constant="4" id="YEb-IA-q2M"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="7E5-aq-G81" secondAttribute="bottom" constant="8" id="60z-6s-gQx"/>
+                <constraint firstAttribute="trailing" secondItem="7E5-aq-G81" secondAttribute="trailing" constant="8" id="Czn-Y6-0zW"/>
+                <constraint firstItem="7E5-aq-G81" firstAttribute="leading" secondItem="8yX-Oe-Nfg" secondAttribute="leading" constant="8" id="Lys-EG-DLw"/>
+                <constraint firstItem="7E5-aq-G81" firstAttribute="top" secondItem="8yX-Oe-Nfg" secondAttribute="top" constant="8" id="OhE-nw-FoV"/>
+                <constraint firstItem="Tld-mR-x0H" firstAttribute="top" secondItem="8yX-Oe-Nfg" secondAttribute="top" constant="10" id="RRu-Cp-Qf2"/>
+                <constraint firstAttribute="trailing" secondItem="Tld-mR-x0H" secondAttribute="trailing" id="YyV-dr-dZM"/>
+            </constraints>
             <size key="customSize" width="185" height="185"/>
             <connections>
+                <outlet property="badgeBackgroundView" destination="Tld-mR-x0H" id="phm-Xy-rD6"/>
+                <outlet property="badgeLabel" destination="ozA-tc-8g4" id="wGJ-WE-zee"/>
                 <outlet property="iconImageView" destination="7E5-aq-G81" id="hzC-9T-sZ8"/>
+                <outletCollection property="iconImageViewMarginConstraints" destination="60z-6s-gQx" collectionClass="NSMutableArray" id="STI-Ih-cYl"/>
+                <outletCollection property="iconImageViewMarginConstraints" destination="Czn-Y6-0zW" collectionClass="NSMutableArray" id="TSL-J8-gr7"/>
+                <outletCollection property="iconImageViewMarginConstraints" destination="Lys-EG-DLw" collectionClass="NSMutableArray" id="6BM-NC-P74"/>
+                <outletCollection property="iconImageViewMarginConstraints" destination="OhE-nw-FoV" collectionClass="NSMutableArray" id="kUy-iD-FiL"/>
             </connections>
-            <point key="canvasLocation" x="-263.5" y="74.5"/>
+            <point key="canvasLocation" x="-264" y="74"/>
         </collectionViewCell>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

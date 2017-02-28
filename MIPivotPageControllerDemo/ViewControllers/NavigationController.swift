@@ -19,7 +19,15 @@ class NavigationController: UINavigationController {
 
 extension NavigationController: MIPivotRootPage {
     
-    func imageForPivotPage() -> UIImage? {
+    var badgeValueForPivotPage: String? {
+        return "21"
+    }
+    
+    var shouldHideBadgeOnPageFocus: Bool {
+        return true
+    }
+    
+    var imageForPivotPage: UIImage? {
         return UIImage(named: "iconA")
     }
     

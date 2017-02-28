@@ -27,8 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController.navigationBar.barTintColor = myBlueColor
         navigationController.navigationBar.tintColor = UIColor.white
         
-        let customHeaderView = CustomHeaderView.get(title: "MIPivotPageController", subtitle: "Now with custom header view!")
+        let customHeaderView = CustomHeaderView.get(title: "MIPivotPageController", subtitle: "Now with custom header view and badge!")
         customHeaderView.backgroundColor = myBlueColor
+        
+        let badgeConfig = MIPivotPageControllerBadgeConfig(
+            badgeBackgroundColor: UIColor(white: 0, alpha: 0.9),
+            badgeLabelFont: UIFont(name: "HelveticaNeue-Bold", size: 13)!,
+            badgeLabelColor: UIColor.white
+        )
         
         let pivotPageController = MIPivotPageController.get(rootPages: [singleViewController, navigationController, tabBarController]) {
             
@@ -37,10 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.menuView.layer.shadowOpacity = 0.3
             $0.menuView.layer.shadowOffset = CGSize(width: 0, height: 2)
             
-            $0.setMenuHeight(60)
-            $0.addHeader(headerView: customHeaderView, withHeight: 100)
+            $0.setMenuHeight(70)
+            $0.addHeaderView(customHeaderView, withHeight: 100)
             
             $0.setStatusBarStyle(.lightContent)
+            
+            $0.setBadgeConfig(badgeConfig)
             
         }
         

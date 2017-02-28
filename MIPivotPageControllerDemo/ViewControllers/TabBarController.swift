@@ -19,7 +19,7 @@ class TabBarController: UITabBarController {
 
 extension TabBarController: MIPivotRootPage {
     
-    func imageForPivotPage() -> UIImage? {
+    var imageForPivotPage: UIImage? {
         return UIImage(named: "iconC")
     }
     

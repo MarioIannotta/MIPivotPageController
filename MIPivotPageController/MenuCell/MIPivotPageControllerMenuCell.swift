@@ -13,7 +13,7 @@ class MIPivotPageControllerMenuCell: UICollectionViewCell {
     static let cellNib = UINib(nibName: "MIPivotPageControllerMenuCell", bundle: nil)
     static let cellIdentifier = "MIPivotPageControllerMenuCell"
     
-    struct Config {
+    private struct IconConfig {
         
         static let iconSelectedAlpha: CGFloat = 1
         static let iconUnselectedAlpha: CGFloat = 0.6
@@ -23,33 +23,59 @@ class MIPivotPageControllerMenuCell: UICollectionViewCell {
         
     }
     
-    @IBOutlet weak var iconImageView: UIImageView!
+    // MARK: - IBOutlets
     
-    func configure(image: UIImage?, selected: Bool) {
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet var iconImageViewMarginConstraints: [NSLayoutConstraint]!
+    @IBOutlet weak var badgeBackgroundView: UIView!
+    @IBOutlet weak var badgeLabel: UILabel!
+    
+    // MARK: - UI update
+    
+    func configure(image: UIImage?, badgeValue: String?, badgeConfig: MIPivotPageControllerBadgeConfig?, shouldHideBadgeOnPageFocus: Bool, selected: Bool) {
         
         iconImageView.image = image
         
-        let selectedAsFloat: Float = selected ? 1 : 0
+        updateUI(forProgress: selected ? 1 : 0, shouldHideBadgeOnPageFocus: shouldHideBadgeOnPageFocus)
         
-        updateForAnimationProgress(selectedAsFloat)
+        if let badgeValue = badgeValue {
+            
+            badgeBackgroundView.isHidden = false
+            
+            if let badgeConfig = badgeConfig {
+                
+                badgeLabel.font = badgeConfig.badgeLabelFont
+                badgeLabel.textColor = badgeConfig.badgeLabelColor
+                badgeBackgroundView.backgroundColor = badgeConfig.badgeBackgroundColor
+            }
+            
+            badgeLabel.text = badgeValue
+            
+            layoutIfNeeded() // need on iOS 10 for the cornerRadius
+            badgeBackgroundView.layer.cornerRadius = badgeBackgroundView.frame.height/2
+            
+        } else {
+            badgeBackgroundView.isHidden = true
+        }
         
     }
     
-    func updateForAnimationProgress(_ animationProgress: Float) {
+    func updateUI(forProgress animationProgress: Float, shouldHideBadgeOnPageFocus: Bool) {
         
-        let animationProgress = max(0, animationProgress)
+        let animationProgress = CGFloat(max(0, animationProgress))
         
-        let alphaForAnimationProgress = Config.iconSelectedAlpha * CGFloat(animationProgress) + Config.iconUnselectedAlpha * CGFloat(1 - animationProgress)
-        let paddingForAnimationProgress = Config.expandedPadding * CGFloat(animationProgress) + Config.contractedPadding * CGFloat(1 - animationProgress)
+        let alphaForAnimationProgress = IconConfig.iconSelectedAlpha * animationProgress + IconConfig.iconUnselectedAlpha * (1 - animationProgress)
+        let paddingForAnimationProgress = IconConfig.expandedPadding * animationProgress + IconConfig.contractedPadding * (1 - animationProgress)
         
         iconImageView.alpha = alphaForAnimationProgress
         
-        iconImageView.frame = CGRect(
-            x: paddingForAnimationProgress,
-            y: paddingForAnimationProgress,
-            width: frame.width - paddingForAnimationProgress*2,
-            height: frame.height - paddingForAnimationProgress*2
-        )
+        if shouldHideBadgeOnPageFocus {
+            badgeBackgroundView.alpha = 1 - animationProgress
+        }
+        
+        for iconImageViewMarginConstraint in iconImageViewMarginConstraints {
+            iconImageViewMarginConstraint.constant = paddingForAnimationProgress
+        }
         
     }
 
