@@ -40,6 +40,9 @@ class MIPivotPage: UIViewController, MIPivotRootPage {
             self.pivotPageController.view.layoutIfNeeded()
         }
         
+        
+        pivotPageController.refreshCollectionsLayout()
+        
     }
     
     func shouldShowPivotMenu() -> Bool {
@@ -147,12 +150,19 @@ class MIPivotPageController: UIViewController {
         
         coordinator.animate(alongsideTransition: { transitionCoordinatorContext in
             
-            self.menuCollectionView.collectionViewLayout.invalidateLayout()
-            self.pagesCollectionView.collectionViewLayout.invalidateLayout()
-            
-            self.view.layoutIfNeeded()
+            self.refreshCollectionsLayout()
+            self.scrollToPage(atIndex: self.selectedIndex)
             
         }, completion: nil)
+        
+    }
+    
+    func refreshCollectionsLayout() {
+        
+        menuCollectionView.collectionViewLayout.invalidateLayout()
+        pagesCollectionView.collectionViewLayout.invalidateLayout()
+        
+        view.layoutIfNeeded()
         
     }
     
