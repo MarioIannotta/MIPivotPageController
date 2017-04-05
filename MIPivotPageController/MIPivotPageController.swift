@@ -142,6 +142,19 @@ class MIPivotPageController: UIViewController {
         delegate?.miPivotPageControllerWillShow(miPivotPageController: self)
         
     }
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.willTransition(to: newCollection, with: coordinator)
+        
+        coordinator.animate(alongsideTransition: { transitionCoordinatorContext in
+            
+            self.menuCollectionView.collectionViewLayout.invalidateLayout()
+            self.pagesCollectionView.collectionViewLayout.invalidateLayout()
+            
+            self.view.layoutIfNeeded()
+            
+        }, completion: nil)
+        
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         
