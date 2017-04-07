@@ -40,7 +40,6 @@ class MIPivotPage: UIViewController, MIPivotRootPage {
             self.pivotPageController.view.layoutIfNeeded()
         }
         
-        
         pivotPageController.refreshCollectionsLayout()
         
     }
@@ -145,15 +144,24 @@ class MIPivotPageController: UIViewController {
         delegate?.miPivotPageControllerWillShow(miPivotPageController: self)
         
     }
-    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.willTransition(to: newCollection, with: coordinator)
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
-        coordinator.animate(alongsideTransition: { transitionCoordinatorContext in
-            
-            self.refreshCollectionsLayout()
-            self.scrollToPage(atIndex: self.selectedIndex)
-            
-        }, completion: nil)
+        refreshCollectionsLayout()
+        
+    }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        coordinator.animate(
+            alongsideTransition: { _ in
+                
+                self.refreshCollectionsLayout()
+                
+            }, completion: { _ in
+                self.scrollToPage(atIndex: self.selectedIndex, animated: false)
+            }
+        )
         
     }
     
@@ -185,7 +193,7 @@ class MIPivotPageController: UIViewController {
     }
     private func setupHeaderView() {
         
-        headerContainerViewHeightConstraint.constant = 0
+        headerContainerViewHeightConstraint.constant = 20
         
     }
     private func addRootPages(_ rootPages: [MIPivotRootPage]) {
@@ -360,9 +368,9 @@ class MIPivotPageController: UIViewController {
         }
         
     }
-    func scrollToPage(atIndex index: Int) {
+    func scrollToPage(atIndex index: Int, animated: Bool = true) {
         
-        pagesCollectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .left, animated: true)
+        pagesCollectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .left, animated: animated)
         
     }
 
