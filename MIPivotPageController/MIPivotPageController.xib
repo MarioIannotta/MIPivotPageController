@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MIPivotPageController" customModule="MIPivotPageController" customModuleProvider="target">
             <connections>
+                <outlet property="footerContainerView" destination="IjZ-Ti-bTo" id="gza-0r-P1u"/>
+                <outlet property="footerContainerViewHeightConstraint" destination="qjq-ks-Bja" id="lKx-Wg-RrJ"/>
                 <outlet property="headerContainerView" destination="ydD-ho-V65" id="taJ-92-yPx"/>
                 <outlet property="headerContainerViewHeightConstraint" destination="9AZ-fM-70S" id="vYa-c3-dUn"/>
                 <outlet property="menuCollectionView" destination="E5K-4R-zZr" id="R42-Jb-NKU"/>
@@ -27,7 +29,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fp-Sf-4tM">
-                    <rect key="frame" x="0.0" y="140" width="375" height="527"/>
+                    <rect key="frame" x="0.0" y="140" width="375" height="427"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S0C-5r-mtW">
                         <size key="itemSize" width="50" height="50"/>
@@ -76,21 +78,31 @@
                         <constraint firstAttribute="height" constant="60" id="9AZ-fM-70S"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IjZ-Ti-bTo">
+                    <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="qjq-ks-Bja"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="oiK-JH-QmT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5FV-W3-OnM"/>
+                <constraint firstAttribute="bottom" secondItem="IjZ-Ti-bTo" secondAttribute="bottom" id="9XV-xy-LP2"/>
                 <constraint firstAttribute="trailing" secondItem="ydD-ho-V65" secondAttribute="trailing" id="9fc-WQ-PpW"/>
+                <constraint firstItem="IjZ-Ti-bTo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BKP-KR-0Va"/>
                 <constraint firstItem="ydD-ho-V65" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Cjd-is-aWe"/>
                 <constraint firstItem="9fp-Sf-4tM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EGP-bS-mzh"/>
                 <constraint firstItem="oiK-JH-QmT" firstAttribute="top" secondItem="ydD-ho-V65" secondAttribute="bottom" id="Fuq-py-0ev"/>
+                <constraint firstItem="IjZ-Ti-bTo" firstAttribute="top" secondItem="9fp-Sf-4tM" secondAttribute="bottom" id="Jwk-by-rTW"/>
+                <constraint firstAttribute="trailing" secondItem="IjZ-Ti-bTo" secondAttribute="trailing" id="gnM-3n-8lJ"/>
                 <constraint firstAttribute="trailing" secondItem="9fp-Sf-4tM" secondAttribute="trailing" id="hhq-kR-jOv"/>
                 <constraint firstItem="ydD-ho-V65" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mIM-PI-QxA"/>
                 <constraint firstAttribute="trailing" secondItem="oiK-JH-QmT" secondAttribute="trailing" id="mpR-PA-Vhl"/>
                 <constraint firstItem="9fp-Sf-4tM" firstAttribute="top" secondItem="oiK-JH-QmT" secondAttribute="bottom" id="wNA-cq-SYV"/>
-                <constraint firstAttribute="bottom" secondItem="9fp-Sf-4tM" secondAttribute="bottom" id="xJr-lT-tcK"/>
             </constraints>
-            <point key="canvasLocation" x="-76" y="20"/>
+            <point key="canvasLocation" x="-76.5" y="19.5"/>
         </view>
     </objects>
 </document>

@@ -27,8 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController.navigationBar.barTintColor = myBlueColor
         navigationController.navigationBar.tintColor = UIColor.white
         
-        let customHeaderView = CustomHeaderView.get(title: "MIPivotPageController", subtitle: "Now with custom header view and badge!")
+        let customHeaderView = CustomTitleAndSubtitleView.get(title: "MIPivotPageController", subtitle: "Now with custom header view and badge!")
         customHeaderView.backgroundColor = myBlueColor
+        
+        let customFooterView = CustomTitleAndSubtitleView.get(title: "And footer as well :D")
+        
         
         let badgeConfig = MIPivotPageControllerBadgeConfig(
             badgeBackgroundColor: UIColor(white: 0, alpha: 0.9),
@@ -45,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             $0.setMenuHeight(70)
             $0.addHeaderView(customHeaderView, withHeight: 100)
+            $0.addFooterView(customFooterView, withHeight: 90)
             
             $0.setStatusBarStyle(.lightContent)
             

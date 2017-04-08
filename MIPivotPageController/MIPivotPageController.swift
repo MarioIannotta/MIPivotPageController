@@ -31,9 +31,17 @@ class MIPivotPage: UIViewController, MIPivotRootPage {
             pivotPageController = (navigationController?.viewControllers.first as? MIPivotPage)?.pivotPageController
         }
         
+        refreshContentView()
+        
+    }
+    
+    fileprivate func refreshContentView() {
+        
         pivotPageController.pagesCollectionView.isScrollEnabled = pivotPageShouldHandleNavigation()
         
         pivotPageController.menuCollectionViewHeightConstraint.constant = shouldShowPivotMenu() ? pivotPageController.menuHeight : 0
+        pivotPageController.footerContainerViewHeightConstraint.constant = shouldShowFooterView() ? pivotPageController.footerHeight : 0
+        
         pivotPageController.pagesCollectionView.collectionViewLayout.invalidateLayout()
         
         UIView.animate(withDuration: 0.2) {
@@ -45,6 +53,11 @@ class MIPivotPage: UIViewController, MIPivotRootPage {
     }
     
     func shouldShowPivotMenu() -> Bool {
+        
+        return true
+        
+    }
+    func shouldShowFooterView() -> Bool {
         
         return true
         
@@ -86,6 +99,7 @@ class MIPivotPageController: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet weak var headerContainerView: UIView!
+    @IBOutlet weak var footerContainerView: UIView!
     @IBOutlet weak var menuView: UIView!
     
     @IBOutlet weak var menuCollectionView: UICollectionView!
@@ -94,6 +108,7 @@ class MIPivotPageController: UIViewController {
     @IBOutlet weak var menuCollectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuCollectionViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerContainerViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var footerContainerViewHeightConstraint: NSLayoutConstraint!
     
     weak var delegate: MIPivotPageControllerDelegate?
     
@@ -101,6 +116,7 @@ class MIPivotPageController: UIViewController {
     
     fileprivate var badgeConfig: MIPivotPageControllerBadgeConfig? = nil
     fileprivate var menuHeight: CGFloat = 80
+    fileprivate var footerHeight: CGFloat = 80
     
     private var statusBarStyle = UIStatusBarStyle.default
     
@@ -134,6 +150,7 @@ class MIPivotPageController: UIViewController {
 
         setupCollectionView()
         setupHeaderView()
+        setupFooterView()
         
         setupClosure?(self)
         
@@ -165,15 +182,6 @@ class MIPivotPageController: UIViewController {
         
     }
     
-    func refreshCollectionsLayout() {
-        
-        menuCollectionView.collectionViewLayout.invalidateLayout()
-        pagesCollectionView.collectionViewLayout.invalidateLayout()
-        
-        view.layoutIfNeeded()
-        
-    }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         
         return statusBarStyle
@@ -194,6 +202,11 @@ class MIPivotPageController: UIViewController {
     private func setupHeaderView() {
         
         headerContainerViewHeightConstraint.constant = 20
+        
+    }
+    private func setupFooterView() {
+        
+        footerContainerViewHeightConstraint.constant = 20
         
     }
     private func addRootPages(_ rootPages: [MIPivotRootPage]) {
@@ -247,6 +260,17 @@ class MIPivotPageController: UIViewController {
             }
             
         }
+        
+    }
+    
+    // MARK: - Refresh
+    
+    fileprivate func refreshCollectionsLayout() {
+        
+        menuCollectionView.collectionViewLayout.invalidateLayout()
+        pagesCollectionView.collectionViewLayout.invalidateLayout()
+        
+        view.layoutIfNeeded()
         
     }
     
@@ -311,6 +335,56 @@ class MIPivotPageController: UIViewController {
         
         headerContainerViewHeightConstraint.constant = height
         menuCollectionViewTopConstraint.constant = 0
+        
+    }
+    func addFooterView(_ footerView: UIView, withHeight height: CGFloat) {
+        
+        footerHeight = height
+        
+        footerContainerView.addSubview(footerView)
+        
+        footerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        footerContainerView.addConstraints([
+            NSLayoutConstraint(
+                item: footerView,
+                attribute: .bottom,
+                relatedBy: .equal,
+                toItem: footerContainerView,
+                attribute: .bottom,
+                multiplier: 1,
+                constant: 0
+            ),
+            NSLayoutConstraint(
+                item: footerView,
+                attribute: .top,
+                relatedBy: .equal,
+                toItem: footerContainerView,
+                attribute: .top,
+                multiplier: 1,
+                constant: 0
+            ),
+            NSLayoutConstraint(
+                item: footerView,
+                attribute: .leading,
+                relatedBy: .equal,
+                toItem: footerContainerView,
+                attribute: .leading,
+                multiplier: 1,
+                constant: 0
+            ),
+            NSLayoutConstraint(
+                item: footerView,
+                attribute: .trailing,
+                relatedBy: .equal,
+                toItem: footerContainerView,
+                attribute: .trailing,
+                multiplier: 1,
+                constant: 0
+            )
+        ])
+        
+        footerContainerViewHeightConstraint.constant = height
         
     }
     func setBadgeConfig(_ badgeConfig: MIPivotPageControllerBadgeConfig) {

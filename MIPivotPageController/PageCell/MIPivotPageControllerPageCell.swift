@@ -13,11 +13,6 @@ class MIPivotPageControllerPageCell: UICollectionViewCell {
     static let cellNib = UINib(nibName: "MIPivotPageControllerPageCell", bundle: nil)
     static let cellIdentifier = "MIPivotPageControllerPageCell"
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     func configure(viewController: UIViewController) {
         
         addSubview(viewController.view)

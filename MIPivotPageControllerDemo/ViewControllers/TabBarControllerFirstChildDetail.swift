@@ -26,6 +26,7 @@ class TabBarControllerFirstChildDetail: MIPivotPage {
     }
     
     override func shouldShowPivotMenu() -> Bool { return false }
+    override func shouldShowFooterView() -> Bool { return false }
     override func pivotPageShouldHandleNavigation() -> Bool { return false }
     
 }

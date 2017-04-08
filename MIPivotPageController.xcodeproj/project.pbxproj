@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC547F221E1FA833001B49CB /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC547F211E1FA833001B49CB /* CustomHeaderView.swift */; };
-		AC547F241E1FA83A001B49CB /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC547F231E1FA83A001B49CB /* CustomHeaderView.xib */; };
+		AC547F221E1FA833001B49CB /* CustomTitleAndSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC547F211E1FA833001B49CB /* CustomTitleAndSubtitleView.swift */; };
+		AC547F241E1FA83A001B49CB /* CustomTitleAndSubtitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC547F231E1FA83A001B49CB /* CustomTitleAndSubtitleView.xib */; };
 		AC5587671D8D91A60051F210 /* TabBarControllerFirstChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5587661D8D91A60051F210 /* TabBarControllerFirstChild.swift */; };
 		AC5587691D8D91AD0051F210 /* TabBarControllerSecondChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5587681D8D91AD0051F210 /* TabBarControllerSecondChild.swift */; };
 		AC55876B1D8DA19C0051F210 /* TabBarControllerFirstChildDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55876A1D8DA19C0051F210 /* TabBarControllerFirstChildDetail.swift */; };
+		AC7834631E9936F90048C8D6 /* MIPivotPageControllerPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7834621E9936F90048C8D6 /* MIPivotPageControllerPageCell.xib */; };
 		AC8AE9CB1D8ADA1D00F7C8B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AE9CA1D8ADA1D00F7C8B4 /* AppDelegate.swift */; };
 		AC8AE9D01D8ADA1D00F7C8B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8AE9CE1D8ADA1D00F7C8B4 /* Main.storyboard */; };
 		AC8AE9D21D8ADA1D00F7C8B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC8AE9D11D8ADA1D00F7C8B4 /* Assets.xcassets */; };
 		AC8AE9D51D8ADA1D00F7C8B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8AE9D31D8ADA1D00F7C8B4 /* LaunchScreen.storyboard */; };
 		AC90AF881D8B2AE800625FB4 /* MIPivotPageControllerPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90AF861D8B2AE800625FB4 /* MIPivotPageControllerPageCell.swift */; };
-		AC90AF891D8B2AE800625FB4 /* MIPivotPageControllerPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC90AF871D8B2AE800625FB4 /* MIPivotPageControllerPageCell.xib */; };
 		AC90AF8C1D8B31DC00625FB4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90AF8B1D8B31DC00625FB4 /* NavigationController.swift */; };
 		AC90AF8E1D8B31E300625FB4 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90AF8D1D8B31E300625FB4 /* SingleViewController.swift */; };
 		ACE1E4321D8C2EBF005C57DD /* NavigationControllerRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1E4311D8C2EBF005C57DD /* NavigationControllerRoot.swift */; };
@@ -30,11 +30,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC547F211E1FA833001B49CB /* CustomHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
-		AC547F231E1FA83A001B49CB /* CustomHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
+		AC547F211E1FA833001B49CB /* CustomTitleAndSubtitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTitleAndSubtitleView.swift; sourceTree = "<group>"; };
+		AC547F231E1FA83A001B49CB /* CustomTitleAndSubtitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTitleAndSubtitleView.xib; sourceTree = "<group>"; };
 		AC5587661D8D91A60051F210 /* TabBarControllerFirstChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarControllerFirstChild.swift; sourceTree = "<group>"; };
 		AC5587681D8D91AD0051F210 /* TabBarControllerSecondChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarControllerSecondChild.swift; sourceTree = "<group>"; };
 		AC55876A1D8DA19C0051F210 /* TabBarControllerFirstChildDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarControllerFirstChildDetail.swift; sourceTree = "<group>"; };
+		AC7834621E9936F90048C8D6 /* MIPivotPageControllerPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIPivotPageControllerPageCell.xib; sourceTree = "<group>"; };
 		AC8AE9C71D8ADA1D00F7C8B4 /* MIPivotPageController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIPivotPageController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8AE9CA1D8ADA1D00F7C8B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC8AE9CF1D8ADA1D00F7C8B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		AC8AE9D41D8ADA1D00F7C8B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC8AE9D61D8ADA1D00F7C8B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC90AF861D8B2AE800625FB4 /* MIPivotPageControllerPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIPivotPageControllerPageCell.swift; sourceTree = "<group>"; };
-		AC90AF871D8B2AE800625FB4 /* MIPivotPageControllerPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIPivotPageControllerPageCell.xib; sourceTree = "<group>"; };
 		AC90AF8B1D8B31DC00625FB4 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		AC90AF8D1D8B31E300625FB4 /* SingleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleViewController.swift; sourceTree = "<group>"; };
 		ACE1E4311D8C2EBF005C57DD /* NavigationControllerRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerRoot.swift; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 		AC547F201E1FA81F001B49CB /* CustomHeaderView */ = {
 			isa = PBXGroup;
 			children = (
-				AC547F211E1FA833001B49CB /* CustomHeaderView.swift */,
-				AC547F231E1FA83A001B49CB /* CustomHeaderView.xib */,
+				AC547F211E1FA833001B49CB /* CustomTitleAndSubtitleView.swift */,
+				AC547F231E1FA83A001B49CB /* CustomTitleAndSubtitleView.xib */,
 			);
 			path = CustomHeaderView;
 			sourceTree = "<group>";
@@ -109,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				AC90AF861D8B2AE800625FB4 /* MIPivotPageControllerPageCell.swift */,
-				AC90AF871D8B2AE800625FB4 /* MIPivotPageControllerPageCell.xib */,
+				AC7834621E9936F90048C8D6 /* MIPivotPageControllerPageCell.xib */,
 			);
 			path = PageCell;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Mario Iannotta";
 				TargetAttributes = {
 					AC8AE9C61D8ADA1D00F7C8B4 = {
@@ -212,11 +212,11 @@
 			files = (
 				ACF364BA1D8AEEEA00C31B9F /* MIPivotPageController.xib in Resources */,
 				ACF364B81D8AEEEA00C31B9F /* MIPivotPageControllerMenuCell.xib in Resources */,
-				AC90AF891D8B2AE800625FB4 /* MIPivotPageControllerPageCell.xib in Resources */,
+				AC7834631E9936F90048C8D6 /* MIPivotPageControllerPageCell.xib in Resources */,
 				AC8AE9D51D8ADA1D00F7C8B4 /* LaunchScreen.storyboard in Resources */,
 				AC8AE9D21D8ADA1D00F7C8B4 /* Assets.xcassets in Resources */,
 				AC8AE9D01D8ADA1D00F7C8B4 /* Main.storyboard in Resources */,
-				AC547F241E1FA83A001B49CB /* CustomHeaderView.xib in Resources */,
+				AC547F241E1FA83A001B49CB /* CustomTitleAndSubtitleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +235,7 @@
 				AC5587671D8D91A60051F210 /* TabBarControllerFirstChild.swift in Sources */,
 				AC55876B1D8DA19C0051F210 /* TabBarControllerFirstChildDetail.swift in Sources */,
 				AC8AE9CB1D8ADA1D00F7C8B4 /* AppDelegate.swift in Sources */,
-				AC547F221E1FA833001B49CB /* CustomHeaderView.swift in Sources */,
+				AC547F221E1FA833001B49CB /* CustomTitleAndSubtitleView.swift in Sources */,
 				ACF908101D8BFCFB0042D140 /* TabBarController.swift in Sources */,
 				ACE1E4321D8C2EBF005C57DD /* NavigationControllerRoot.swift in Sources */,
 				ACF364B91D8AEEEA00C31B9F /* MIPivotPageController.swift in Sources */,
@@ -283,6 +283,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -333,6 +334,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

@@ -1,5 +1,5 @@
 //
-//  CustomHeaderView.swift
+//  CustomTitleAndSubtitleView.swift
 //  MIPivotPageController
 //
 //  Created by Mario on 06/01/2017.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-class CustomHeaderView: UIView {
+class CustomTitleAndSubtitleView: UIView {
     
     // MARK: - IBOutlets
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
 
-    static func get(title: String, subtitle: String) -> CustomHeaderView {
+    static func get(title: String, subtitle: String? = nil) -> CustomTitleAndSubtitleView {
         
-        let view = UINib(nibName: "CustomHeaderView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! CustomHeaderView
+        let view = UINib(nibName: "CustomTitleAndSubtitleView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! CustomTitleAndSubtitleView
         
         view.titleLabel.text = title
         view.subtitleLabel.text = subtitle
