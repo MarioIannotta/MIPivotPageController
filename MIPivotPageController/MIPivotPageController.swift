@@ -206,7 +206,7 @@ class MIPivotPageController: UIViewController {
     }
     private func setupFooterView() {
         
-        footerContainerViewHeightConstraint.constant = 20
+        footerContainerViewHeightConstraint.constant = 0
         
     }
     private func addRootPages(_ rootPages: [MIPivotRootPage]) {
